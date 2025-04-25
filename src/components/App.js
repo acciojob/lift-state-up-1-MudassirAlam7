@@ -1,11 +1,23 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
+import ChildButton from "./Child";
 
 const App = () => {
+  const [showModal, setShowModal] = useState(false)
+ 
   return (
-    <div>
-        {/* Do not remove the main div */}
+    <div className="parent">
+      <h2>Parent Component</h2>
+      <ChildButton setShowModal = {()=>setShowModal(true)}/>
+        {
+          showModal && (
+            <div>
+              <h4>This is a modal content</h4>
+            </div>
+          )
+        }
+        
     </div>
   )
 }
