@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import './../styles/App.css';
 import ChildButton from "./Child";
 
-const App = () => {
+const Parent = () => {
   const [showModal, setShowModal] = useState(false)
  
   return (
@@ -22,4 +22,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Parent
